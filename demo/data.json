@@ -1,0 +1,27 @@
+[
+    { 
+        "date": "2023-01-01T00:00:00", 
+        "title": "Yıl Başı 2023", 
+        "description": "Yeni bir yıl başladı." 
+    },
+    { 
+        "date": "2023-05-19T00:00:00", 
+        "title": "Atatürk'ü Anma, Gençlik ve Spor Bayramı", 
+        "description": "19 Mayıs kutlamaları." 
+    },
+    { 
+        "date": "2023-10-29T00:00:00", 
+        "title": "Cumhuriyet Bayramı", 
+        "description": "Türkiye Cumhuriyeti'nin 100. Yılı." 
+    },
+    { 
+        "date": "now", 
+        "title": "Bugün", 
+        "description": "Şu an." 
+    },
+    { 
+        "date": "2024-01-01T00:00:00", 
+        "title": "Yıl Başı 2024", 
+        "description": "Yeni bir yıl daha." 
+    }
+]
