@@ -1,0 +1,101 @@
+/* Temel sıfırlama */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Sayfanın kaymasını engelle */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Canvas'ı ekranı kaplayacak şekilde ayarla */
+#myTimeline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+}
+
+#myTimeline.grabbing {
+    cursor: grabbing;
+}
+
+/* Demo Kontrolleri */
+.controls {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    gap: 8px;
+    align-items: center; /* Butonları dikeyde hizala */
+}
+
+/* GÜNCELLENDİ: Genel Buton Stili (Bugün butonu için) */
+.controls button {
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    border-radius: 8px; /* Daire değil, köşeli */
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.controls button:hover {
+    background-color: #f9f9f9;
+}
+
+/* GÜNCELLENDİ: İkon Buton Stili (+ ve - için) */
+.controls .btn-icon {
+    width: 40px; /* Sabit genişlik */
+    height: 40px;
+    padding: 0; /* İç boşluğu sıfırla */
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50%; /* Daire yap */
+}
+
+/* GÜNCELLENDİ: Bildirim Konumu (Üst-Orta) */
+#zoomIndicator {
+    position: absolute;
+    top: 20px; /* Üstten boşluk */
+    left: 50%; /* Ortala */
+    transform: translateX(-50%); /* Tam ortala */
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    z-index: 20;
+    opacity: 0; /* Başlangıçta gizli */
+    transition: opacity 0.3s ease-out;
+    pointer-events: none; /* Üzerine tıklanmasını engelle */
+}
+
+/* Bildirimi göstermek için .active sınıfı */
+#zoomIndicator.active {
+    opacity: 1;
+}
+
+
+/* Demo Detay Paneli */
+.details-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    background: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 300px;
+}
